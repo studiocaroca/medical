@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Corse 3D</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="TemplatesJungle">
+  <meta name="keywords" content="Landing Page, Products, Headphones">
+  <meta name="description" content="Heady is a Single Product Landing Page Tailwind CSS ">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+
+  <!-- Styles CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/themify-icons@1.0.1/css/themify-icons.css">
+  <link rel="stylesheet" href="css/themify-icons/css/themify-icons.css">
+</head>
+
+<body class="bg-body" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%"
+  data-bs-smooth-scroll="true" tabindex="0">
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol xmlns="http://www.w3.org/2000/svg" id="navbar-icon" viewBox="0 0 16 16">
+      <path fill="currentColor"
+        d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="play" viewBox="0 0 32 32">
+      <path fill="currentColor"
+        d="M7 28a1 1 0 0 1-1-1V5a1 1 0 0 1 1.482-.876l20 11a1 1 0 0 1 0 1.752l-20 11A1 1 0 0 1 7 28ZM8 6.69v18.62L24.925 16Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="star-fill" viewBox="0 0 16 16">
+      <path fill="currentColor"
+        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="star-empty" viewBox="0 0 16 16">
+      <path fill="currentColor"
+        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="cart" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M17 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2c0-1.11.89-2 2-2M1 2h3.27l.94 2H20a1 1 0 0 1 1 1c0 .17-.05.34-.12.5l-3.58 6.47c-.34.61-1 1.03-1.75 1.03H8.1l-.9 1.63l-.03.12a.25.25 0 0 0 .25.25H19v2H7a2 2 0 0 1-2-2c0-.35.09-.68.24-.96l1.36-2.45L3 4H1V2m6 16a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2c0-1.11.89-2 2-2m9-7l2.78-5H6.14l2.36 5H16Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="wishlist" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="m12.1 18.55l-.1.1l-.11-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04 1 3.57 2.36h1.86C13.46 6 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05M16.5 3c-1.74 0-3.41.81-4.5 2.08C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.41 2 8.5c0 3.77 3.4 6.86 8.55 11.53L12 21.35l1.45-1.32C18.6 15.36 22 12.27 22 8.5C22 5.41 19.58 3 16.5 3Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="balloon" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
+        <path
+          d="M8 16.607c1.15.86 2.518 1.38 4 1.393c4.142.034 7.594-3.92 7.56-8.196C19.527 5.53 16.142 2.034 12 2c-4.142-.034-7.473 3.404-7.44 7.68A8.88 8.88 0 0 0 5.244 13" />
+        <path
+          d="M15.5 9a3.035 3.035 0 0 0-3-3M12 20.35c.321 0 .482 0 .593-.022c.654-.128 1.051-.772.858-1.39c-.033-.105-.109-.242-.261-.515M12 20.35c-.321 0-.482 0-.593-.022c-.654-.128-1.051-.772-.858-1.39c.033-.105.109-.242.261-.515M12 20.35v2.15" />
+      </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="bag-heart" viewBox="0 0 24 24">
+      <g fill="none">
+        <path fill="currentColor"
+          d="m12 12.191l-.519.542a.75.75 0 0 0 1.038 0L12 12.191Zm-.957 3.675l-.444.604l.444-.604Zm1.914 0l-.444-.605l.444.605Zm-.957.462v.75v-.75Zm-.514-1.067c-.417-.307-.878-.69-1.227-1.093c-.368-.426-.509-.757-.509-.971h-1.5c0 .77.441 1.45.875 1.952c.453.525 1.014.984 1.474 1.321l.887-1.21ZM9.75 13.197c0-.576.263-.827.492-.907c.25-.088.714-.06 1.24.443l1.037-1.083c-.825-.79-1.861-1.096-2.773-.776c-.934.327-1.496 1.226-1.496 2.323h1.5Zm3.65 3.273c.46-.337 1.022-.796 1.475-1.32c.434-.502.875-1.183.875-1.953h-1.5c0 .214-.141.545-.51.971c-.348.403-.809.786-1.226 1.093l.887 1.21Zm2.35-3.273c0-1.097-.563-1.996-1.496-2.323c-.912-.32-1.948-.014-2.773.776l1.038 1.083c.525-.503.989-.531 1.24-.443c.228.08.491.33.491.907h1.5ZM10.6 16.47c.368.27.782.608 1.4.608v-1.5c-.024 0-.04 0-.094-.03a4 4 0 0 1-.42-.287l-.887 1.21Zm1.914-1.21a4 4 0 0 1-.42.289c-.054.029-.07.029-.094.029v1.5c.618 0 1.032-.337 1.4-.608l-.886-1.21Z" />
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5"
+          d="M9 6V5a3 3 0 1 1 6 0v1m5.224 6.526c-.586-3.121-.878-4.682-1.99-5.604C17.125 6 15.537 6 12.36 6h-.72c-3.176 0-4.764 0-5.875.922c-1.11.922-1.403 2.483-1.989 5.604c-.823 4.389-1.234 6.583-.034 8.029C4.942 22 7.174 22 11.639 22h.722c4.465 0 6.698 0 7.897-1.445c.696-.84.85-1.93.696-3.555" />
+      </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="handiplast" viewBox="0 0 24 24">
+      <g fill="none">
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5"
+          d="M13.5 7.642L9.071 3.213a4.142 4.142 0 0 0-5.858 5.858L14.93 20.787a4.142 4.142 0 0 0 5.858-5.858l-4.358-4.358" />
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5"
+          d="m12 17.858l-2.929 2.929A4.142 4.142 0 0 1 2.596 20m3.546-8l-2.929 2.929c-.322.322-.58.685-.774 1.071M12 6.142l2.929-2.929a4.142 4.142 0 1 1 5.858 5.858L17.857 12" />
+        <path fill="currentColor"
+          d="M15.841 12.871a.788.788 0 1 1-1.114 1.114a.788.788 0 0 1 1.114-1.114Zm-3.712-3.712a.787.787 0 1 0-1.114 1.114a.787.787 0 0 0 1.114-1.114Zm4.641 6.497a.787.787 0 1 1-1.114 1.114a.787.787 0 0 1 1.114-1.114ZM9.345 8.23A.788.788 0 1 0 8.23 9.346A.788.788 0 0 0 9.345 8.23Zm3.712 3.713a.787.787 0 1 1-1.113 1.114a.787.787 0 0 1 1.113-1.114Zm.928 2.785a.788.788 0 1 1-1.114 1.113a.788.788 0 0 1 1.114-1.113Zm-3.712-3.713a.787.787 0 1 0-1.114 1.114a.787.787 0 0 0 1.114-1.114Z" />
+      </g>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="send" viewBox="0 0 32 32">
+      <path fill="currentColor"
+        d="M26.07 3.996a2.974 2.974 0 0 0-.933.223h-.004c-.285.113-1.64.683-3.7 1.547l-7.382 3.109c-5.297 2.23-10.504 4.426-10.504 4.426l.062-.024s-.359.118-.734.375a2.03 2.03 0 0 0-.586.567c-.184.27-.332.683-.277 1.11c.09.722.558 1.155.894 1.394c.34.242.664.355.664.355h.008l4.883 1.645c.219.703 1.488 4.875 1.793 5.836c.18.574.355.933.574 1.207c.106.14.23.257.379.351a1.119 1.119 0 0 0 .246.106l-.05-.012c.015.004.027.016.038.02c.04.011.067.015.118.023c.773.234 1.394-.246 1.394-.246l.035-.028l2.883-2.625l4.832 3.707l.11.047c1.007.442 2.027.196 2.566-.238c.543-.437.754-.996.754-.996l.035-.09l3.734-19.129c.106-.472.133-.914.016-1.343a1.807 1.807 0 0 0-.781-1.047a1.872 1.872 0 0 0-1.067-.27zm-.101 2.05c-.004.063.008.056-.02.177v.011l-3.699 18.93c-.016.027-.043.086-.117.145c-.078.062-.14.101-.465-.028l-5.91-4.531l-3.57 3.254l.75-4.79l9.656-9c.398-.37.265-.448.265-.448c.028-.454-.601-.133-.601-.133l-12.176 7.543l-.004-.02l-5.836-1.965v-.004l-.015-.003a.27.27 0 0 0 .03-.012l.032-.016l.031-.011s5.211-2.196 10.508-4.426c2.652-1.117 5.324-2.242 7.379-3.11a807.312 807.312 0 0 1 3.66-1.53c.082-.032.043-.032.102-.032z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="facebook" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="twitter" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="instagram" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="linkedin" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68Z" />
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" id="youtube" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12.244 4c.534.003 1.87.016 3.29.073l.504.022c1.429.067 2.857.183 3.566.38c.945.266 1.687 1.04 1.938 2.022c.4 1.56.45 4.602.456 5.339l.001.152v.174c-.007.737-.057 3.78-.457 5.339c-.254.985-.997 1.76-1.938 2.022c-.709.197-2.137.313-3.566.38l-.504.023c-1.42.056-2.756.07-3.29.072l-.235.001h-.255c-1.13-.007-5.856-.058-7.36-.476c-.944-.266-1.687-1.04-1.938-2.022c-.4-1.56-.45-4.602-.456-5.339v-.326c.006-.737.056-3.78.456-5.339c.254-.985.997-1.76 1.939-2.021c1.503-.419 6.23-.47 7.36-.476h.489ZM9.999 8.5v7l6-3.5l-6-3.5Z" />
+    </symbol>
+
+    <!-- WhatsApp -->
+    <symbol xmlns="http://www.w3.org/2000/svg" id="whatsapp" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2"
+        d="M16.67 14.83c-.27-.14-1.58-.78-1.83-.87s-.38-.1-.55.12-.63.87-.77 1.05-.28.15-.52.05c-.24-.1-1.02-.38-1.93-1.18-.71-.63-1.19-1.41-1.33-1.65s-.14-.43-.02-.57c.12-.15.27-.38.4-.57.13-.18.17-.3.27-.5.1-.19.05-.36-.02-.5-.07-.14-.52-1.24-.71-1.7s-.36-.47-.51-.48c-.14-.01-.31-.01-.48-.01s-.36.05-.55.25c-.19.21-.73.71-.73 1.73s.75 2.01.85 2.15c.1.14 1.46 2.25 3.53 3.14.49.21.88.34 1.21.43.51.14 1.01.12 1.39.08.38-.04 1.07-.3 1.22-.58.15-.28.23-.52.18-.64-.05-.12-.19-.21-.46-.36zM12 2c-5.52 0-10 4.48-10 10c0 1.77.46 3.42 1.26 4.83L2 22l5.41-1.25A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z" />
+    </symbol>
+
+    <!-- Email -->
+    <symbol xmlns="http://www.w3.org/2000/svg" id="email" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
+    </symbol>
+
+    <!-- Location Pin -->
+    <symbol xmlns="http://www.w3.org/2000/svg" id="location-pin" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2"
+        d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 12a3 3 0 1 1 0-6a3 3 0 0 1 0 6z" />
+    </symbol>
+  </svg>
+
+
+  </svg>
+
+  <div class="preloader-wrapper">
+    <div class="preloader">
+    </div>
+  </div>
+
+  <!-- Whatsapp button -->
+  <a class="whatsapp-button" href="https://api.whatsapp.com/send?phone=5492213645781" target="_blank"
+    rel="noopener noreferrer">
+    <i class="fa fa-whatsapp"></i>
+  </a>
+
+  <header id="header" class="text-black bg-white fixed top-0 left-0 right-0 z-50"
+    x-data="{ mobileMenuOpen: false, userModalOpen: false, pagesDropdownOpen: false, activeTab: 'signin' }">
+    <nav id="header-nav" class="px-3 py-5">
+      <div class="container mx-auto flex items-center justify-between">
+        <a class="flex items-center" href="index.html">
+          <img src="images/main-logo.png" class="logo w-full lg:w-1/5 md:w-1/4 sm:w-1/2">
+        </a>
+
+        <!-- Mobile menu button -->
+        <button class="lg:hidden p-2 border-0 focus:outline-none focus:shadow-none" type="button"
+          aria-label="Toggle navigation" @click="mobileMenuOpen = !mobileMenuOpen">
+          <svg class="navbar-icon" width="50" height="50">
+            <use xlink:href="#navbar-icon"></use>
+          </svg>
+        </button>
+
+        <!-- Mobile menu (offcanvas) -->
+        <div
+          class="fixed block lg:hidden inset-y-0 right-0 w-full max-w-xs bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50"
+          :class="{'translate-x-0': mobileMenuOpen, 'translate-x-full': !mobileMenuOpen}">
+          <div class="px-4 py-8 flex justify-between items-center">
+            <a class="flex items-center" href="index.html">
+              <img src="images/main-logo.png" class="logo" width="50%">
+            </a>
+            <button type="button" class="text-black focus:outline-none" @click="mobileMenuOpen = false"
+              aria-label="Close">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="p-4">
+            <ul class="flex flex-col space-y-5">
+              <li>
+                <a class="block active" href="#intro">Home</a>
+              </li>
+              <li>
+                <a class="block" href="#corse3d">Corse3D</a>
+              </li>
+              <li>
+                <a class="block" href="#metodos">Métodos</a>
+              </li>
+              <li>
+                <a class="block" href="#contacto">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Desktop menu -->
+        <div class="hidden lg:flex items-center">
+          <ul class="flex space-x-12">
+            <li>
+              <a class="active" href="#intro">Home</a>
+            </li>
+            <li>
+              <a href="#corse3d">Corse3D</a>
+            </li>
+            <li>
+              <a href="#metodos">Métodos</a>
+            </li>
+            <li>
+              <a href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="overflow-hidden">
+    <section id="intro">
+      <div class="flex flex-col lg:flex-row">
+        <!-- Image Column -->
+        <div class="w-full lg:w-1/2">
+          <div class="banner-image">
+            <img src="images/banner-image1.jpg" alt="banner" class="w-full h-auto">
+          </div>
+        </div>
+
+        <!-- Content Column -->
+        <div class="w-full lg:w-1/2 flex justify-center items-center bg-cover bg-center bg-no-repeat"
+          style="background-image: url(images/banner-bg.jpg); min-height: 500px;">
+          <div class="banner-content p-8 lg:p-12 text-center center text-grey" data-aos="fade-up" data-aos-delay="9000">
+            <img src="images/insignia-grey.png" class="logo margin-bottom" width="20%">
+            <p class="text-lg md:text-2xl mb-6 xl:w-2/3">Diseñamos aplicando los principios biomecánicos del Corsé Cheneau y los
+              fundamentos terapéuticos activos del método Schroth</p>
+            <a href="#company-services"
+              class="inline-block rounded px-8 py-3 border-1 border-grey uppercase hover:bg-gray-100/60 hover:border-0 hover:opacity hover:text-green-950 transition duration-300 mt-4 text-grey">
+              Rediseñá tu postura
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+    <div class="overflow-hidden">
+
+    <section id="company-services" class="py-20 lg:py-28" data-aos="zoom-out">
+      <div class="flex justify-center flex-col w-full lg:w-2/3 mx-auto mb-8 text-center">
+        <h2 class="text-4xl font-bold mb-8">Corse 3D</h2>
+        <p>El Corsé 3D es una <strong>ortesis toracolumbosacra personalizada</strong>, diseñada a partir de un
+          escaneo digital del paciente y fabricada mediante <strong>impresión 3D con materiales de alta
+          resistencia</strong> desarrollados específicamente para uso ortopédico.</p>
+        <p>Aplicamos los principios biomecánicos del <strong>corsé Cheneau</strong> junto con los fundamentos
+          terapéuticos activos del <strong>método Schroth</strong>.</p>
+        <p>Este enfoque integral permite no solo detener la progresión de la curva, sino también
+          mejorar la estética postural y la función respiratoria, logrando una corrección tridimensional de la
+          escoliosis:</p>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap -mx-2">
+          <!-- Service 1 -->
+          <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-8">
+            <div class="icon-box text-center p-6 hover:bg-gray-50 rounded-lg transition-colors duration-300">
+              <div class="icon-box-icon mb-4">
+                <img class="mx-auto text-primary" src="images/plano1.svg" alt="" width="70">
+              </div>
+              <div class="icon-box-content">
+                <h4 class="text-xl md:text-2xl font-semibold capitalize mb-2">Plano frontal</h4>
+                <p class="text-gray-600">Corrige la desviación lateral de la columna.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-8">
+            <div
+              class="icon-box text-center p-6 border-l border-r border-gray-200 hover:bg-gray-50 rounded-lg transition-colors duration-300">
+              <div class="icon-box-icon mb-4">
+                <img class="mx-auto text-primary" src="images/plano2.svg" alt="" width="70">
+              </div>
+              <div class="icon-box-content">
+                <h4 class="text-xl md:text-2xl font-semibold capitalize mb-2">Plano sagital</h4>
+                <p class="text-gray-600">Restaura el equilibrio natural de las curvas.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-8 sm:mx-auto lg:mx-0">
+            <div class="icon-box text-center p-6 hover:bg-gray-50 rounded-lg transition-colors duration-300">
+              <div class="icon-box-icon mb-4">
+                <img class="mx-auto text-primary" src="images/plano3.svg" alt="" width="70">
+              </div>
+              <div class="icon-box-content">
+                <h4 class="text-xl md:text-2xl font-semibold capitalize mb-2">Plano transversal</h4>
+                <p class="text-gray-600">Derota las vértebras y mejora la simetría corporal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="subscribe" class="py-20 lg:py-28" style="background-color: #3F54DD;">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-center">
+        <div class="w-full lg:w-1/2">
+          <div class="subscribe-content">
+            <div class="subscribe-header text-center">
+              <a href="#contacto"
+                 class="inline-block rounded px-8 py-3 border-1 border-grey uppercase hover:bg-gray-100/60 hover:border-0 hover:opacity hover:text-blue-800 transition duration-300 mt-4 text-grey">
+                Consultanos para tu evaluación</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="overflow-hidden">
+    <section id="corse3d" class="py-20 lg:py-28">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <!-- Left Column Features -->
+          <div class="w-full lg:w-1/4 mb-12 lg:mb-0" data-aos="fade-up">
+            <div class="featured-item mb-8 text-center">
+              <h3 class="text-xl font-medium mb-2">Diseño 3D personalizado</h3>
+              <p class="text-gray-600">Escaneo digital y software especializado garantizan un ajuste exclusivo para cada
+                paciente.</p>
+            </div>
+            <div class="featured-item mb-8 text-center">
+              <h3 class="text-xl font-medium mb-2">Corrección tridimensional activa</h3>
+              <p class="text-gray-600">Inspirado en Cheneau + Schroth para actuar sobre los tres planos de la
+                escoliosis:
+                frontal, sagital y transversal.</p>
+            </div>
+
+          </div>
+
+          <!-- Center Image -->
+          <div class="w-full lg:w-2/5 mb-12 lg:mb-0 px-4" data-aos="zoom-out">
+            <div class="image-holder text-center">
+              <img src="images/single-image1.jpg" alt="headphone" class="rounded-2xl w-full max-w-md mx-auto">
+            </div>
+          </div>
+
+          <!-- Right Column Features -->
+          <div class="w-full lg:w-1/4" data-aos="fade-up">
+            <div class="featured-item mb-8 text-center">
+              <h3 class="text-xl font-medium mb-2">Alta precisión y confort</h3>
+              <p class="text-gray-600">Impresión 3D con material específico para uso ortopédico y acabados profesionales
+                que mejoran la durabilidad y la estética.</p>
+            </div>
+            <div class="featured-item mb-8 text-center">
+              <h3 class="text-xl font-medium mb-2">Alta precisión y confort</h3>
+              <p class="text-gray-600">Impresión 3D con material específico para uso ortopédico y acabados profesionales
+                que mejoran la durabilidad y la estética.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <video autoplay muted loop playsinline style="width:100%; height:auto;">
+    <source src="images/video.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
+
+  <div class="overflow-hidden">
+    <section id="metodos" class="py-20 lg:py-28" data-aos="zoom-out">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center lg:gap-12">
+          <!-- Image Column -->
+          <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+            <div class="image-holder rounded-lg overflow-hidden shadow-lg">
+              <img src="images/single-image2.jpg" alt="metodos" class="w-full h-auto">
+            </div>
+          </div>
+
+          <!-- FAQ Column -->
+          <div class="w-full lg:w-1/2">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8">Métodos</h2>
+
+            <div class="accordion space-y-4">
+              <!-- FAQ Item 1 (Open by default) -->
+              <div class="accordion-item border-b border-gray-200 pb-4">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button flex justify-between items-center w-full text-left text-lg md:text-xl font-medium py-3 focus:outline-none">
+                    <span>Un abordaje tridimensional para tratar la escoliosis</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300 rotate-180" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </button>
+                </h3>
+                <div class="accordion-content pt-2 pb-4 text-gray-600">
+                  Según la Scoliosis Research Society (SRS), la escoliosis es una curvatura lateral de la
+                  columna vertebral de 10 grados o más, acompañada de rotación vertebral.
+                  Esta condición afecta la columna en los planos frontal, sagital y transversal, por lo que el
+                  tratamiento debe abordarse de manera tridimensional.
+                </div>
+              </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="accordion-item border-b border-gray-200 pb-4">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button flex justify-between items-center w-full text-left text-lg md:text-xl font-medium py-3 focus:outline-none">
+                    <span>Corsé Cheneau</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </button>
+                </h3>
+                <div class="accordion-content hidden pt-2 pb-4 text-gray-600"> Diseño asimétrico y personalizado que
+                  genera zonas de apoyo y expansión, aplicando
+                  fuerzas dirigidas para corregir en los tres planos y optimizar la alineación durante el
+                  crecimiento.
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="accordion-item border-b border-gray-200 pb-4">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button flex justify-between items-center w-full text-left text-lg md:text-xl font-medium py-3 focus:outline-none">
+                    <span>Método Schroth</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </button>
+                </h3>
+                <div class="accordion-content hidden pt-2 pb-4 text-gray-600">
+                  Fisioterapia específica para escoliosis que combina respiración dirigida, activación
+                  muscular y control postural consciente, potenciando las correcciones logradas por el corsé.
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="accordion-item border-b border-gray-200 pb-4">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button flex justify-between items-center w-full text-left text-lg md:text-xl font-medium py-3 focus:outline-none">
+                    <span>¿Cómo actua en cada plano?</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </button>
+                </h3>
+                <div class="accordion-content hidden pt-2 pb-4 text-gray-600">
+                  <ul>
+                    <li>Plano frontal: Reduce la desviación lateral de la columna.</li>
+                    <li>Plano sagital: Restaura el equilibrio natural de las curvas fisiológicas.</li>
+                    <li>Plano transversal: Derota las vértebras y mejora la simetría corporal.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- FAQ Item 5 -->
+              <div class="accordion-item border-b border-gray-200 pb-4">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button flex justify-between items-center w-full text-left text-lg md:text-xl font-medium py-3 focus:outline-none">
+                    <span>Beneficios clave</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </button>
+                </h3>
+                <div class="accordion-content hidden pt-2 pb-4 text-gray-600">
+                  <ul>
+                    <li>Corrección tridimensional real, no solo contención.</li>
+                    <li>Mayor comodidad y adherencia al tratamiento.</li>
+                    <li>Potencia sus resultados cuando se combina con PSSE (Ejercicios Fisioterapéuticos
+                      Específicos para Escoliosis).</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <section id="subscribe" class="py-20 lg:py-28" style="background-color: #152B35;">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-center">
+        <div class="w-full lg:w-1/2">
+          <div class="subscribe-content">
+            <div class="subscribe-header text-center">
+              <a href="#contacto"
+                 class="inline-block rounded px-8 py-3 border-1 border-grey uppercase hover:bg-gray-100/60 hover:border-0 hover:opacity hover:text-green-950 transition duration-300 mt-4 text-grey">
+                Conocé si este enfoque es para vos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="contacto" class="py-20 lg:py-28 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-center">
+        <div class="w-full lg:w-1/2">
+          <div class="subscribe-content mb-8">
+            <div class="subscribe-header text-center">
+              <h2 class="text-4xl font-bold mb-8">Contactanos</h2>
+              <p class="mt-2">Cada caso de escoliosis es único. </p>
+              <p>Por eso nuestro primer paso es escucharte, comprender
+                tu caso y ofrecerte una propuesta personalizada.
+              </p>
+              <p>Atendemos con cita previa en La Plata, Buenos
+                Aires.</p>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <ul class="list-none flex flex-wrap gap-3 justify-center">
+
+              <li class="border rounded-full p-2 border-gray-300 hover:border-secondary">
+                <a href="https://wa.me/+5492213645781" target="_blank">
+                  <svg width="25" height="25" class="text-gray-300 hover:text-gray-500 transition ease-in-out">
+                    <use xlink:href="#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="border rounded-full p-2 border-gray-300 hover:border-secondary">
+                <a href="mailto:corse3dschroth@gmail.com">
+                  <svg width="25" height="25" class="text-gray-300 hover:text-gray-500 transition ease-in-out">
+                    <use xlink:href="#email"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="border rounded-full p-2 border-gray-300 hover:border-secondary">
+                <a
+                  href="https://www.google.com/maps/place/La+Plata,+Buenos+Aires+Province/@-34.9283253,-58.0113479,12.28z/data=!4m6!3m5!1s0x95a2e62b1f0085a1:0xbcfc44f0547312e3!8m2!3d-34.9204948!4d-57.9535657!16zL20vMDIzYjk3?entry=tts&g_ep=EgoyMDI1MDgxOS4wIPu8ASoASAFQAw%3D%3D&skid=84261be4-29e3-411e-9720-aaa280eb070e">
+                  <svg width="25" height="25" class="text-gray-300 hover:text-gray-500 transition ease-in-out">
+                    <use xlink:href="#location-pin"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="border rounded-full p-2 border-gray-300 hover:border-secondary">
+                <a href="https://www.instagram.com/corse3d/">
+                  <svg width="25" height="25" viewBox="0 0 24 24"
+                    class="text-gray-300 hover:text-gray-500 transition ease-in-out">
+                    <use xlink:href="#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <div class="footer-bottom text-center py-6">
+    <p>Copyright
+      <script>document.write(new Date().getFullYear())</script> &copy; by <a href="http://www.studiocaroca.com.ar"
+        target="_blank"><img src="images/logo-caroca.svg" alt="Studio caroca" width="100" class="logo-caroca"></a>
+    </p>
+  </div>
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+  <!-- Swiper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- Alpine.js -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js" defer></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
