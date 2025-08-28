@@ -2,7 +2,8 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "build-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+    "build-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.10",
