@@ -9,8 +9,10 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="author" content="Studio Caroca">
-  <meta name="keywords" content="corsé 3D, corsé, escoliosis, corsé ortopédico 3D, escoliosis Buenos Aires, corsé Schroth Cheneau, a medida, tratamiento escoliosis adolescentes, tecnología médica, corsé para hipercifosis, ortopedia avanzada Argentina, ergonómico, personalizado">
-  <meta name="description" content="corsés con tecnología médica e impresión 3D personalizada para escoliosis e hipercifosis">
+  <meta name="keywords"
+    content="corsé 3D, corsé, escoliosis, corsé ortopédico 3D, escoliosis Buenos Aires, corsé Schroth Cheneau, a medida, tratamiento escoliosis adolescentes, tecnología médica, corsé para hipercifosis, ortopedia avanzada Argentina, ergonómico, personalizado">
+  <meta name="description"
+    content="corsés con tecnología médica e impresión 3D personalizada para escoliosis e hipercifosis">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -346,7 +348,8 @@ background: linear-gradient(180deg,rgba(42, 123, 155, 1) 0%, rgba(255, 255, 255,
           <!-- Center Image -->
           <div class="w-full lg:w-2/5 mb-12 lg:mb-0 px-4" data-aos="zoom-out">
             <div class="image-holder text-center">
-              <img src="images/ilustracion-de-corse.jpg" alt="ilustración de corsé y su creador" class="rounded-2xl w-full max-w-md mx-auto">
+              <img src="images/ilustracion-de-corse.jpg" alt="ilustración de corsé y su creador"
+                class="rounded-2xl w-full max-w-md mx-auto">
             </div>
           </div>
 
@@ -532,6 +535,20 @@ background: linear-gradient(180deg,rgba(42, 123, 155, 1) 0%, rgba(255, 255, 255,
             </div>
           </div>
 
+          <form id="contact-form" action="https://formsubmit.co/TU_CORREO@ejemplo.com" method="POST" class="space-y-4">
+            <input type="text" name="name" placeholder="Tu nombre" required class="w-full p-2 border rounded">
+            <input type="email" name="email" placeholder="Tu email" required class="w-full p-2 border rounded">
+            <textarea name="message" placeholder="Tu mensaje" required class="w-full p-2 border rounded"></textarea>
+
+            <!-- Evitamos captcha y redirecciones -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Enviar</button>
+
+            <!-- Mensaje oculto -->
+            <p id="form-message" class="text-green-600 hidden">✅ Gracias, tu mensaje ha sido enviado.</p>
+          </form>
+
           <div class="social-links">
             <ul class="list-none flex flex-wrap gap-3 justify-center">
 
@@ -593,6 +610,32 @@ background: linear-gradient(180deg,rgba(42, 123, 155, 1) 0%, rgba(255, 255, 255,
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <!-- Alpine.js -->
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js" defer></script>
+
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const message = document.getElementById('form-message');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault(); // Evita recargar
+      const data = new FormData(form);
+
+      try {
+        await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        form.reset(); // Limpia el formulario
+        message.classList.remove('hidden'); // Muestra el mensaje
+      } catch (error) {
+        message.textContent = "❌ Hubo un error, intenta de nuevo.";
+        message.classList.remove('hidden');
+        message.classList.replace('text-green-600', 'text-red-600');
+      }
+    });
+  </script>
 
 </body>
 
