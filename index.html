@@ -534,19 +534,20 @@ background: linear-gradient(180deg,rgba(42, 123, 155, 1) 0%, rgba(255, 255, 255,
             </div>
           </div>
 
-          <form id="contact-form" action="https://formsubmit.co/corse3dschroth@gmail.com" method="POST" class="space-y-4 mb-6">
-            <input type="text" name="name" placeholder="Tu nombre" required class="w-full p-2 border rounded">
-            <input type="email" name="email" placeholder="Tu email" required class="w-full p-2 border rounded">
-            <textarea name="message" placeholder="Tu mensaje" required class="w-full p-2 border rounded"></textarea>
+          <form id="contact-form" action="send_email.php" method="POST" class="space-y-4 mb-6">
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required class="w-full p-2 border rounded">
+            <input type="email" id="email" name="email" placeholder="Tu email" required class="w-full p-2 border rounded">
+            <textarea name="message" id="message" placeholder="Tu mensaje" required class="w-full p-2 border rounded"></textarea>
 
             <!-- Evitamos captcha y redirecciones -->
             <input type="hidden" name="_captcha" value="false">
 
-            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Enviar</button>
+            <button type="submit" name="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Enviar</button>
 
             <!-- Mensaje oculto -->
             <p id="form-message" class="text-green-600 hidden">✅ Gracias, tu mensaje ha sido enviado.</p>
           </form>
+>
 
           <div class="social-links">
             <ul class="list-none flex flex-wrap gap-3 justify-center">
@@ -569,7 +570,7 @@ background: linear-gradient(180deg,rgba(42, 123, 155, 1) 0%, rgba(255, 255, 255,
 
               <li class="border rounded-full p-2 border-gray-300 hover:border-secondary">
                 <a
-                  href="https://www.google.com/maps/place/La+Plata,+Buenos+Aires+Province/@-34.9283253,-58.0113479,12.28z/data=!4m6!3m5!1s0x95a2e62b1f0085a1:0xbcfc44f0547312e3!8m2!3d-34.9204948!4d-57.9535657!16zL20vMDIzYjk3?entry=tts&g_ep=EgoyMDI1MDgxOS4wIPu8ASoASAFQAw%3D%3D&skid=84261be4-29e3-411e-9720-aaa280eb070e">
+                  href="https://maps.app.goo.gl/UepbopKUrsP2yV1v7">
                   <svg width="25" height="25" class="text-gray-300 hover:text-gray-500 transition ease-in-out">
                     <use xlink:href="#location-pin"></use>
                   </svg>
