@@ -11,43 +11,29 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          blue2: "#2A7B9B",
-          blue: "#3F54DD",
-          gray: "#EDEDED",
-          bluelight: "#B5C8DC",
-          green: "#152B35",
+          primary:    "#53A4B6",
+          accent:     "#FFCC6C",
+          accentSoft: "#FFF7B9",
+          dark:       "#001F26",
+          grayMid:    "#8A8A8A",
+          grayLight:  "#E6E6E6",
         },
-        fontFamily: {
-          sans: [
-            'AvenirLTStd-Black',
-            'AvenirLTStd-BlackOblique',
-            'AvenirLTStd-Book',
-            'AvenirLTStd-BookOblique',
-            'AvenirLTStd-Heavy',
-            'AvenirLTStd-HeavyOblique',
-            'AvenirLTStd-Light',
-            'AvenirLTStd-LightOblique',
-            'AvenirLTStd-Medium',
-            'AvenirLTStd-MediumOblique',
-            'AvenirLTStd-Oblique',
-            'AvenirLTStd-Roman',
-            'Helvetica',
-            'Arial',
-            'sans-serif',
-          ],
-        avenir: ['Avenir', 'sans-serif'],
-        nasalization: ['Nasalization', 'sans-serif'],
-        },
+      },
+      fontFamily: {
+        sans:    ["DM Sans", "sans-serif"],
+        heading: ["MuseoModerno", "sans-serif"],
+      },
+      backgroundImage: {
+        "brand-gradient": "linear-gradient(135deg, #53A4B6, #a8c9a0)",
       },
     },
   },
   plugins: [
     plugin(({ addBase, theme }) => {
       addBase({
-        html: { color: theme("colors.bodyColor") },
+        html: { color: theme("colors.brand.dark") },
       });
     }),
     require('@tailwindcss/forms'),
   ],
 }
-

@@ -1,6 +1,6 @@
 <?php
 // Reemplaza con los datos de tu servidor de correo
-$to_email = "info@corse3d.com.ar";
+$to_email = "info@medical.com.ar";
 $subject = "Nuevo mensaje desde el formulario de contacto";
 $from_email = $_POST['email']; // El remitente será el email ingresado por el usuario
 $message = $_POST['message'];
