@@ -17,6 +17,10 @@
     font-family: "MuseoModerno", sans-serif;
     color: #001F26;
   }
+
+  section h2 {
+    color: #53A4B6;
+  }
 }
 
 @layer components {
@@ -160,7 +164,27 @@
   font-size: 0.8em;
 }
 
-.menu a:hover {
+
+.menu a:not(.btn-primary) {
+  white-space: nowrap;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Reserva el ancho del texto en bold sin mostrarlo, evitando el salto */
+.menu a:not(.btn-primary)::after {
+  content: attr(data-text);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+  display: block;
+}
+
+.menu a:not(.btn-primary):hover,
+.menu a:not(.btn-primary).active {
   font-weight: bold;
   color: #53A4B6;
 }
@@ -178,6 +202,7 @@
 
 .btn-primary:hover {
   background-color: #3a8a9e;
+  color: #fff !important;
 }
 
 .btn-accent {

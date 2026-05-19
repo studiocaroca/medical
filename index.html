@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Corsé 3D</title>
+  <title>Medical</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -182,16 +182,19 @@
           <div class="p-4">
             <ul class="flex flex-col space-y-5">
               <li>
-                <a class="block active" href="#intro">Home</a>
+                <a class="block active" href="#intro" data-text="Home">Home</a>
               </li>
               <li>
-                <a class="block" href="#company-services">Corsé3D</a>
+                <a class="block" href="#company-services" data-text="Medical">Medical</a>
               </li>
               <li>
-                <a class="block" href="#metodos">Métodos</a>
+                <a class="block" href="#especialidades" data-text="Especialidades">Especialidades</a>
               </li>
               <li>
-                <a class="block" href="#contacto">Contacto</a>
+                <a class="block" href="#como-funciona" data-text="Cómo funciona">Cómo funciona</a>
+              </li>
+              <li>
+                <a class="btn-primary block text-center" href="#contacto" data-text="Contactanos">Contactanos</a>
               </li>
             </ul>
           </div>
@@ -199,18 +202,21 @@
 
         <!-- Desktop menu -->
         <div class="hidden lg:flex items-center menu">
-          <ul class="flex space-x-12">
+          <ul class="flex items-center space-x-8">
             <li>
-              <a class="active" href="#intro">Home</a>
+              <a class="active" href="#intro" data-text="Home">Home</a>
             </li>
             <li>
-              <a href="#company-services">Corsé3D</a>
+              <a href="#company-services" data-text="Medical">Medical</a>
             </li>
             <li>
-              <a href="#metodos">Métodos</a>
+              <a href="#especialidades" data-text="Especialidades">Especialidades</a>
             </li>
             <li>
-              <a href="#contacto">Contacto</a>
+              <a href="#como-funciona" data-text="Cómo funciona">Cómo funciona</a>
+            </li>
+            <li>
+              <a class="btn-primary" href="#contacto" data-text="Contactanos">Contactanos</a>
             </li>
           </ul>
         </div>
@@ -220,24 +226,14 @@
 
   <div class="overflow-hidden">
     <section id="intro">
-      <div class="flex flex-col lg:flex-row">
-        <!-- Image Column -->
-        <div class="w-full lg:w-1/2">
-          <div class="banner-image">
-            <img src="images/banner-image1.jpg" alt="banner" class="w-full h-auto">
-          </div>
-        </div>
-
-        <!-- Content Column -->
-        <div class="w-full lg:w-1/2 flex justify-center items-center bg-cover bg-center bg-no-repeat"
-          style="background-image: url(images/banner-bg.jpg); min-height: 500px;">
+ 
+      <!-- Content Column -->
+        <div class="w-full flex justify-center items-center bg-cover bg-center bg-no-repeat"
+          style="background: linear-gradient(232deg,rgba(171, 208, 186, 1) 0%, rgba(104, 173, 187, 1) 50%, rgba(255, 204, 108, 1) 100%); min-height: 650px;">
           <div class="banner-content p-8 lg:p-12 text-center center text-grey" data-aos="fade-up" data-aos-delay="9000">
-            <img src="images/insignia-grey.png" class="margin-bottom" width="20%" alt="logo insignia">
-            <p class="text-lg md:text-2xl mb-6 xl:w-2/3">Diseñamos aplicando los principios biomecánicos del Corsé
-              Cheneau y los
-              fundamentos terapéuticos activos del método Schroth</p>
+            <img src="images/insignia-grey.png" class="margin-bottom" width="40%" alt="logo insignia">
             <a href="#company-services" class="btn-outline mt-4">
-              Rediseñá tu postura
+              HACÉ TU CONSULTA
             </a>
           </div>
         </div>
@@ -249,56 +245,41 @@
   <div class="overflow-hidden">
 
     <section id="company-services" class="py-20 lg:py-28 px-8" data-aos="zoom-out">
-      <div class="flex justify-center flex-col w-full lg:w-2/3 mx-auto mb-8 text-center">
-        <h2 class="text-4xl font-bold mb-8">Corsé 3D</h2>
-        <p>El Corsé 3D es una <strong>ortesis toracolumbosacra personalizada</strong>, diseñada a partir de un
-          escaneo digital del paciente y fabricada mediante <strong>impresión 3D con materiales de alta
-            resistencia</strong> desarrollados específicamente para uso ortopédico.</p>
-        <p>Aplicamos los principios biomecánicos del <strong>corsé Cheneau</strong> junto con los fundamentos
-          terapéuticos activos del <strong>método Schroth</strong>.</p>
-        <p>Este enfoque integral permite no solo detener la progresión de la curva, sino también
-          mejorar la estética postural y la función respiratoria, logrando una corrección tridimensional de la
-          escoliosis:</p>
+      <div class="flex justify-center flex-col w-full lg:w-5/12 mx-auto mb-8 text-center">
+        <h2 class="text-4xl font-bold mb-8">¿Quiénes somos?</h2>
+        <p class="mb-4">Somos un equipo de <strong>profesionales de la salud</strong> con diferentes especialidades y años de experiencia, comprometidos con una forma de atención <strong>más presente, accesible y centrada en las personas</strong>. Este proyecto nace a partir de nuestra experiencia en <strong>hepatología</strong>, donde hemos observado las dificultades que enfrentan muchos pacientes para acceder a una <strong>orientación clara y oportuna</strong>.</p>
+        <p class="mb-4">Con el tiempo entendimos que estos desafíos atraviesan gran parte del sistema de salud. Por eso decidimos crear un espacio que conecte a las personas con <strong>equipos profesionales interdisciplinarios</strong> que puedan acompañarlas de manera integral.</p>
+        <p>Hoy ofrecemos un entorno de <strong>atención virtual</strong> simple y confiable, donde los pacientes pueden encontrar <strong>orientación, seguimiento y apoyo continuo</strong>. Nuestro objetivo es hacer que el acceso a una atención de calidad sea <strong>más fácil, más humano y disponible para todos</strong>.</p>
       </div>
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap -mx-2">
-          <!-- Service 1 -->
-          <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-8">
+          <!-- Fundadora 1 -->
+          <div class="w-full sm:w-1/2 px-2 mb-8 mx-auto max-w-sm">
             <div class="icon-box text-center p-6 hover:bg-gray-50 rounded-lg transition-colors duration-300">
-              <div class="icon-box-icon mb-4">
-                <img class="mx-auto text-primary" src="images/plano-frontal.svg" alt="plano frontal" width="70">
+              <div class="mb-5">
+                <div class="w-36 h-36 rounded-full bg-gray-200 mx-auto flex items-center justify-center overflow-hidden">
+                  <!-- Reemplazar src con la foto real de Paola -->
+                  <span class="text-gray-400 text-sm">Foto próximamente</span>
+                </div>
               </div>
-              <div class="icon-box-content">
-                <h4 class="text-xl md:text-2xl font-semibold capitalize mb-2">Plano frontal</h4>
-                <p class="text-gray-600">Corrige la desviación lateral de la columna</p>
-              </div>
+              <h4 class="text-xl md:text-2xl font-semibold mb-2">Paola Coisson</h4>
+              <p class="text-gray-500 text-sm uppercase tracking-wide mb-3">Médica especialista</p>
+              <p class="text-gray-600">Texto descriptivo de Paola — especialidad, trayectoria y enfoque de atención. (Provisorio)</p>
             </div>
           </div>
 
-          <!-- Service 2 -->
-          <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-8">
-            <div
-              class="icon-box text-center p-6 border-l border-r border-gray-200 hover:bg-gray-50 rounded-lg transition-colors duration-300">
-              <div class="icon-box-icon mb-4">
-                <img class="mx-auto text-primary" src="images/plano-sagital.svg" alt="plano sagital" width="70">
-              </div>
-              <div class="icon-box-content">
-                <h4 class="text-xl md:text-2xl font-semibold capitalize mb-2">Plano sagital</h4>
-                <p class="text-gray-600">Restaura el equilibrio fisiológico de las curvas</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Service 3 -->
-          <div class="w-full sm:w-1/2 lg:w-1/3 px-2 mb-8 sm:mx-auto lg:mx-0">
+          <!-- Fundadora 2 -->
+          <div class="w-full sm:w-1/2 px-2 mb-8 mx-auto max-w-sm">
             <div class="icon-box text-center p-6 hover:bg-gray-50 rounded-lg transition-colors duration-300">
-              <div class="icon-box-icon mb-4">
-                <img class="mx-auto text-primary" src="images/plano-transversal.svg" alt="plano transversal" width="70">
+              <div class="mb-5">
+                <div class="w-36 h-36 rounded-full bg-gray-200 mx-auto flex items-center justify-center overflow-hidden">
+                  <!-- Reemplazar src con la foto real de Mercedes -->
+                  <span class="text-gray-400 text-sm">Foto próximamente</span>
+                </div>
               </div>
-              <div class="icon-box-content">
-                <h4 class="text-xl md:text-2xl font-semibold capitalize mb-2">Plano transversal</h4>
-                <p class="text-gray-600">Derota las vértebras y mejora la simetría corporal</p>
-              </div>
+              <h4 class="text-xl md:text-2xl font-semibold mb-2">Mercedes Rodriguez Gazari</h4>
+              <p class="text-gray-500 text-sm uppercase tracking-wide mb-3">Médica especialista</p>
+              <p class="text-gray-600">Texto descriptivo de Mercedes — especialidad, trayectoria y enfoque de atención. (Provisorio)</p>
             </div>
           </div>
         </div>
@@ -306,14 +287,14 @@
     </section>
   </div>
 
-  <section id="subscribe" class="py-20 lg:py-28" style="padding-top: 30px; background: linear-gradient(135deg, #53A4B6, #a8c9a0);">
+  <section id="subscribe" class="py-20 lg:py-28" style="padding-top: 80px; background: linear-gradient(135deg, #53A4B6, #a8c9a0);">
     <div class="container mx-auto px-4">
       <div class="flex justify-center">
         <div class="w-full lg:w-1/2">
           <div class="subscribe-content">
             <div class="subscribe-header text-center">
               <a href="#contacto" class="btn-outline">
-                Consultanos para tu evaluación</a>
+                Solicitá tu turno</a>
             </div>
           </div>
         </div>
@@ -323,8 +304,9 @@
 
 
   <div class="overflow-hidden">
-    <section id="medical" class="py-20 lg:py-28">
+    <section id="especialidades" class="py-20 lg:py-28">
       <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Especialidades</h2>
         <div class="flex flex-col lg:flex-row items-center justify-between">
           <!-- Left Column Features -->
           <div class="w-full lg:w-1/4 mb-12 lg:mb-0" data-aos="fade-up">
@@ -374,7 +356,7 @@
   </video>
 
   <div class="overflow-hidden">
-    <section id="metodos" class="py-20 lg:py-28" data-aos="zoom-out">
+    <section id="como-funciona" class="py-20 lg:py-28" data-aos="zoom-out">
       <div class="container mx-auto px-4">
         <div class="flex flex-col lg:flex-row items-center lg:gap-12">
           <!-- Image Column -->
@@ -386,7 +368,7 @@
 
           <!-- FAQ Column -->
           <div class="w-full lg:w-1/2">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8">Métodos</h2>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8">Cómo funciona</h2>
 
             <div class="accordion space-y-4">
               <!-- FAQ Item 1 (Open by default) -->
@@ -497,14 +479,14 @@
   </div>
 
 
-  <section id="subscribe" class="py-20 lg:py-28" style="background-color: #001F26;">
+  <section id="subscribe" class="py-20 lg:py-28" style="background: linear-gradient(135deg, #53A4B6, #a8c9a0);">
     <div class="container mx-auto px-4">
       <div class="flex justify-center">
         <div class="w-full lg:w-1/2">
           <div class="subscribe-content">
             <div class="subscribe-header text-center">
               <a href="#contacto" class="btn-outline">
-                Conocé si este enfoque es para vos</a>
+                EMPECEMOS</a>
             </div>
           </div>
         </div>
@@ -631,6 +613,26 @@
         message.classList.replace('text-green-600', 'text-red-600');
       }
     });
+  </script>
+
+  <script>
+    const navLinks = document.querySelectorAll('.menu a[href^="#"]:not(.btn-primary)');
+    const sections = document.querySelectorAll('section[id]');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + entry.target.id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(section => observer.observe(section));
   </script>
 
 </body>
