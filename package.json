@@ -1,7 +1,13 @@
 {
+  "name": "heady-tailwindcss-single-product-landing-page-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "vite",
-    "build": "tailwindcss -i ./src/index.css -o ./src/index.built.css && vite build",
+    "build": "vite build",
     "build-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "preview": "vite preview"
   },
@@ -12,13 +18,6 @@
     "tailwindcss": "^3.4.1",
     "vite": "^6.3.3"
   },
-  "overrides": {
-    "sucrase": "3.34.0",
-    "ts-interface-checker": "0.1.13"
-  },
-  "name": "heady-tailwindcss-single-product-landing-page-template",
-  "version": "1.0.0",
-  "main": "index.js",
   "keywords": [
     "Heady",
     "Single Product",
