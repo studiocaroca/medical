@@ -73,6 +73,45 @@
       position: relative;
       overflow: hidden;
     }
+    .consulta-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      z-index: 1;
+    }
+    .consulta-slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+    .consulta-slide.exiting {
+      opacity: 1;
+      z-index: 2;
+      -webkit-mask-image: linear-gradient(
+        105deg,
+        black 0%, black 20%,
+        rgba(0,0,0,0.6) 38%,
+        rgba(0,0,0,0.2) 52%,
+        transparent 68%, transparent 100%
+      );
+      mask-image: linear-gradient(
+        105deg,
+        black 0%, black 20%,
+        rgba(0,0,0,0.6) 38%,
+        rgba(0,0,0,0.2) 52%,
+        transparent 68%, transparent 100%
+      );
+      -webkit-mask-size: 300% 300%;
+      mask-size: 300% 300%;
+      animation: diagonalExit 1.2s ease forwards;
+    }
+    @keyframes diagonalExit {
+      0%   { -webkit-mask-position: 0% 0%;   mask-position: 0% 0%; }
+      100% { -webkit-mask-position: 100% 100%; mask-position: 100% 100%; }
+    }
+
     @keyframes rainFall {
       0%   { transform: translateY(0); }
       100% { transform: translateY(50%); }
@@ -631,8 +670,15 @@
         <div class="flex flex-col lg:flex-row items-center" style="gap: 8rem;">
           <!-- Image Column -->
           <div class="w-full lg:w-1/3 mb-8 lg:mb-0">
-            <div class="image-holder rounded-lg overflow-hidden shadow-lg mx-auto" style="max-width: 460px; height: 580px;">
-               <img src="images/consulta.jpg" alt="Consulta médica por videollamada a través del celular" class="w-full h-full object-cover">
+            <div class="image-holder rounded-lg overflow-hidden shadow-lg mx-auto" style="max-width: 460px; height: 580px; position: relative;">
+              <img src="images/consulta.jpg"  class="consulta-slide active" alt="Consulta médica">
+              <img src="images/consulta2.jpg" class="consulta-slide" alt="Consulta médica">
+              <img src="images/consulta3.jpg" class="consulta-slide" alt="Consulta médica">
+              <img src="images/consulta4.jpg" class="consulta-slide" alt="Consulta médica">
+              <img src="images/consulta5.jpg" class="consulta-slide" alt="Consulta médica">
+              <img src="images/consulta6.jpg" class="consulta-slide" alt="Consulta médica">
+              <img src="images/consulta7.jpg" class="consulta-slide" alt="Consulta médica">
+              <img src="images/consulta8.jpg" class="consulta-slide" alt="Consulta médica">
             </div>
           </div>
 
@@ -646,7 +692,7 @@
                 <h3 class="accordion-header">
                   <button
                     class="accordion-button flex justify-between items-center w-full text-left text-lg md:text-xl font-medium py-3 focus:outline-none">
-                    <span>1. Solicitá tu turno</span>
+                    <span class="flex items-center gap-3"><span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;min-width:2rem;background:#FFCC6C;border-radius:50%;color:#fff;font-weight:700;font-size:1rem;">1</span>Solicitá tu turno</span>
                     <svg class="w-5 h-5 transform transition-transform duration-300 rotate-180" fill="none"
                       stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -663,7 +709,7 @@
                 <h3 class="accordion-header">
                   <button
                     class="accordion-button flex justify-between items-center w-full text-left text-lg md:text-xl font-medium py-3 focus:outline-none">
-                    <span>2. Confirmación</span>
+                    <span class="flex items-center gap-3"><span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;min-width:2rem;background:#FFCC6C;border-radius:50%;color:#fff;font-weight:700;font-size:1rem;">2</span>Confirmación</span>
                     <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor"
                       viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -680,7 +726,7 @@
                 <h3 class="accordion-header">
                   <button
                     class="accordion-button flex justify-between items-center w-full text-left text-lg md:text-xl font-medium py-3 focus:outline-none">
-                    <span>3.  Preparate para la consulta</span>
+                    <span class="flex items-center gap-3"><span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;min-width:2rem;background:#FFCC6C;border-radius:50%;color:#fff;font-weight:700;font-size:1rem;">3</span>Preparate para la consulta</span>
                     <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor"
                       viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -689,9 +735,11 @@
                 </h3>
                 <div class="accordion-content hidden pt-2 pb-4 text-gray-600">
                  Subí a la plataforma todos los estudios disponibles:
-
+<br>
 🆕 Primera consulta → estudios previos relacionados.
+<br>
 🔄 Consulta de seguimiento → estudios solicitados por el profesional.
+<br>
 ⚠️ Importante: Tener los estudios cargados con anticipación es indispensable para optimizar el tiempo de atención y garantizar la calidad de tu consulta.
                 </div>
               </div>
@@ -701,7 +749,7 @@
                 <h3 class="accordion-header">
                   <button
                     class="accordion-button flex justify-between items-center w-full text-left text-lg md:text-xl font-medium py-3 focus:outline-none">
-                    <span>4. Resumen y seguimiento</span>
+                    <span class="flex items-center gap-3"><span style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;min-width:2rem;background:#FFCC6C;border-radius:50%;color:#fff;font-weight:700;font-size:1rem;">4</span>Resumen y seguimiento</span>
                     <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor"
                       viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -890,6 +938,28 @@
   <!-- Alpine.js -->
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js" defer></script>
 
+  <script>
+    (function () {
+      const slides = document.querySelectorAll('.consulta-slide');
+      if (!slides.length) return;
+      let current = 0;
+
+      setInterval(function () {
+        const outgoing = slides[current];
+        current = (current + 1) % slides.length;
+        const incoming = slides[current];
+
+        // La nueva imagen aparece por debajo (z-index 1)
+        incoming.classList.add('active');
+
+        // La imagen actual se barre en diagonal encima (z-index 2)
+        outgoing.classList.add('exiting');
+        outgoing.addEventListener('animationend', function () {
+          outgoing.classList.remove('active', 'exiting');
+        }, { once: true });
+      }, 5000);
+    })();
+  </script>
 
 
   <script>
