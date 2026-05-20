@@ -84,6 +84,28 @@
     .whatsapp-button {
       animation: whatsappBounce 5s ease infinite, whatsappRing 5s ease infinite;
     }
+    .logo-shine-wrapper {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+    }
+    .logo-shine-wrapper::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -75%;
+      width: 45%;
+      height: 200%;
+      background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.65) 50%, transparent 100%);
+      transform: skewX(-20deg);
+      animation: logoShine 10s ease infinite;
+      pointer-events: none;
+    }
+    @keyframes logoShine {
+      0%, 50%  { left: -75%; }
+      95%      { left: 125%; }
+      100%     { left: 125%; }
+    }
   </style>
 </head>
 
@@ -204,7 +226,9 @@
     <nav id="header-nav" class="px-3 py-5">
       <div class="container mx-auto flex items-center justify-between">
         <a class="flex items-center" href="index.html">
-          <img src="images/main-logo.png" class="logo w-full lg:w-1/5 md:w-1/4 sm:w-1/2" alt="logo">
+          <span class="logo-shine-wrapper">
+            <img src="images/main-logo.png" class="logo w-full lg:w-1/5 md:w-1/4 sm:w-1/2" alt="logo">
+          </span>
         </a>
 
         <!-- Mobile menu button -->
@@ -308,7 +332,7 @@
         <div class="flex flex-wrap -mx-2">
           <!-- Fundadora 1 -->
           <div class="w-full sm:w-1/2 px-2 mb-8 mx-auto max-w-sm">
-            <div class="icon-box text-center p-6 hover:bg-gray-50 rounded-lg transition-colors duration-300">
+            <div class="icon-box text-center p-6 hover:bg-gray-50 rounded-lg transition-all duration-300 hover:scale-105 cursor-default">
               <div class="mb-5">
                 <div class="w-36 h-36 rounded-full bg-gray-200 mx-auto flex items-center justify-center overflow-hidden">
                   <!-- Reemplazar src con la foto real de Paola -->
@@ -323,7 +347,7 @@
 
           <!-- Fundadora 2 -->
           <div class="w-full sm:w-1/2 px-2 mb-8 mx-auto max-w-sm">
-            <div class="icon-box text-center p-6 hover:bg-gray-50 rounded-lg transition-colors duration-300">
+            <div class="icon-box text-center p-6 hover:bg-gray-50 rounded-lg transition-all duration-300 hover:scale-105 cursor-default">
               <div class="mb-5">
                 <div class="w-36 h-36 rounded-full bg-gray-200 mx-auto flex items-center justify-center overflow-hidden">
                   <!-- Reemplazar src con la foto real de Mercedes -->
@@ -711,6 +735,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <!-- Alpine.js -->
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js" defer></script>
+
 
 
   <script>
