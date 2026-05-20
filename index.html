@@ -69,6 +69,30 @@
     .marquee-wrapper::before { left: 0;  background: linear-gradient(to right, white, transparent); }
     .marquee-wrapper::after  { right: 0; background: linear-gradient(to left,  white, transparent); }
 
+    .subscribe-pattern {
+      position: relative;
+      overflow: hidden;
+    }
+    @keyframes rainFall {
+      0%   { transform: translateY(0); }
+      100% { transform: translateY(50%); }
+    }
+    .subscribe-icons-bg {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      right: 0;
+      height: 200%;
+      pointer-events: none;
+      opacity: 0.13;
+      color: white;
+      animation: rainFall 18s linear infinite;
+    }
+    .subscribe-icons-bg i {
+      position: absolute;
+      font-size: 2.2rem;
+    }
+
     @keyframes whatsappBounce {
       0%, 55%, 100% { transform: scale(1); }
       60%           { transform: scale(1.25); }
@@ -364,7 +388,70 @@
     </section>
   </div>
 
-  <section id="subscribe" class="py-20 lg:py-28" style="padding-top: 80px; background: linear-gradient(135deg, #53A4B6, #a8c9a0);">
+  <section id="subscribe" class="py-20 lg:py-28 subscribe-pattern" style="padding-top: 80px; background: linear-gradient(135deg, #53A4B6, #a8c9a0);">
+    <div class="subscribe-icons-bg" aria-hidden="true">
+      <!-- SET 1 — oculto arriba (top 0–50% del contenedor = encima de la sección) -->
+      <i class="fa fa-heartbeat"     style="top:3%;  left:2%;  transform:rotate(-12deg);"></i>
+      <i class="fa fa-stethoscope"   style="top:3%;  left:16%; transform:rotate(15deg);"></i>
+      <i class="fa fa-medkit"        style="top:3%;  left:30%; transform:rotate(-8deg);"></i>
+      <i class="fa fa-user-md"       style="top:3%;  left:44%; transform:rotate(20deg);"></i>
+      <i class="fa fa-hospital-o"    style="top:3%;  left:58%; transform:rotate(-5deg);"></i>
+      <i class="fa fa-leaf"          style="top:3%;  left:72%; transform:rotate(10deg);"></i>
+      <i class="fa fa-comments"      style="top:3%;  left:86%; transform:rotate(-18deg);"></i>
+
+      <i class="fa fa-plus-square-o" style="top:15%; left:9%;  transform:rotate(12deg);"></i>
+      <i class="fa fa-ambulance"     style="top:15%; left:23%; transform:rotate(-7deg);"></i>
+      <i class="fa fa-heartbeat"     style="top:15%; left:37%; transform:rotate(18deg);"></i>
+      <i class="fa fa-stethoscope"   style="top:15%; left:51%; transform:rotate(-10deg);"></i>
+      <i class="fa fa-medkit"        style="top:15%; left:65%; transform:rotate(8deg);"></i>
+      <i class="fa fa-user-md"       style="top:15%; left:79%; transform:rotate(-15deg);"></i>
+
+      <i class="fa fa-hospital-o"    style="top:28%; left:2%;  transform:rotate(5deg);"></i>
+      <i class="fa fa-leaf"          style="top:28%; left:16%; transform:rotate(-14deg);"></i>
+      <i class="fa fa-comments"      style="top:28%; left:30%; transform:rotate(11deg);"></i>
+      <i class="fa fa-plus-square-o" style="top:28%; left:44%; transform:rotate(-9deg);"></i>
+      <i class="fa fa-ambulance"     style="top:28%; left:58%; transform:rotate(16deg);"></i>
+      <i class="fa fa-heartbeat"     style="top:28%; left:72%; transform:rotate(-13deg);"></i>
+      <i class="fa fa-stethoscope"   style="top:28%; left:86%; transform:rotate(7deg);"></i>
+
+      <i class="fa fa-medkit"        style="top:40%; left:9%;  transform:rotate(-19deg);"></i>
+      <i class="fa fa-user-md"       style="top:40%; left:23%; transform:rotate(9deg);"></i>
+      <i class="fa fa-hospital-o"    style="top:40%; left:37%; transform:rotate(-4deg);"></i>
+      <i class="fa fa-leaf"          style="top:40%; left:51%; transform:rotate(15deg);"></i>
+      <i class="fa fa-comments"      style="top:40%; left:65%; transform:rotate(-11deg);"></i>
+      <i class="fa fa-ambulance"     style="top:40%; left:79%; transform:rotate(14deg);"></i>
+
+      <!-- SET 2 — visible inicialmente (top 50–100% = dentro de la sección), idéntico al set 1 + 50% -->
+      <i class="fa fa-heartbeat"     style="top:53%; left:2%;  transform:rotate(-12deg);"></i>
+      <i class="fa fa-stethoscope"   style="top:53%; left:16%; transform:rotate(15deg);"></i>
+      <i class="fa fa-medkit"        style="top:53%; left:30%; transform:rotate(-8deg);"></i>
+      <i class="fa fa-user-md"       style="top:53%; left:44%; transform:rotate(20deg);"></i>
+      <i class="fa fa-hospital-o"    style="top:53%; left:58%; transform:rotate(-5deg);"></i>
+      <i class="fa fa-leaf"          style="top:53%; left:72%; transform:rotate(10deg);"></i>
+      <i class="fa fa-comments"      style="top:53%; left:86%; transform:rotate(-18deg);"></i>
+
+      <i class="fa fa-plus-square-o" style="top:65%; left:9%;  transform:rotate(12deg);"></i>
+      <i class="fa fa-ambulance"     style="top:65%; left:23%; transform:rotate(-7deg);"></i>
+      <i class="fa fa-heartbeat"     style="top:65%; left:37%; transform:rotate(18deg);"></i>
+      <i class="fa fa-stethoscope"   style="top:65%; left:51%; transform:rotate(-10deg);"></i>
+      <i class="fa fa-medkit"        style="top:65%; left:65%; transform:rotate(8deg);"></i>
+      <i class="fa fa-user-md"       style="top:65%; left:79%; transform:rotate(-15deg);"></i>
+
+      <i class="fa fa-hospital-o"    style="top:78%; left:2%;  transform:rotate(5deg);"></i>
+      <i class="fa fa-leaf"          style="top:78%; left:16%; transform:rotate(-14deg);"></i>
+      <i class="fa fa-comments"      style="top:78%; left:30%; transform:rotate(11deg);"></i>
+      <i class="fa fa-plus-square-o" style="top:78%; left:44%; transform:rotate(-9deg);"></i>
+      <i class="fa fa-ambulance"     style="top:78%; left:58%; transform:rotate(16deg);"></i>
+      <i class="fa fa-heartbeat"     style="top:78%; left:72%; transform:rotate(-13deg);"></i>
+      <i class="fa fa-stethoscope"   style="top:78%; left:86%; transform:rotate(7deg);"></i>
+
+      <i class="fa fa-medkit"        style="top:90%; left:9%;  transform:rotate(-19deg);"></i>
+      <i class="fa fa-user-md"       style="top:90%; left:23%; transform:rotate(9deg);"></i>
+      <i class="fa fa-hospital-o"    style="top:90%; left:37%; transform:rotate(-4deg);"></i>
+      <i class="fa fa-leaf"          style="top:90%; left:51%; transform:rotate(15deg);"></i>
+      <i class="fa fa-comments"      style="top:90%; left:65%; transform:rotate(-11deg);"></i>
+      <i class="fa fa-ambulance"     style="top:90%; left:79%; transform:rotate(14deg);"></i>
+    </div>
     <div class="container mx-auto px-4">
       <div class="flex justify-center">
         <div class="w-full lg:w-1/2">
@@ -634,7 +721,70 @@
   </div>
 
 
-  <section id="subscribe" class="py-20 lg:py-28" style="background: linear-gradient(135deg, #53A4B6, #a8c9a0);">
+  <section id="subscribe" class="py-20 lg:py-28 subscribe-pattern" style="background: linear-gradient(135deg, #53A4B6, #a8c9a0);">
+    <div class="subscribe-icons-bg" aria-hidden="true">
+      <!-- SET 1 — oculto arriba (top 0–50% del contenedor = encima de la sección) -->
+      <i class="fa fa-heartbeat"     style="top:3%;  left:2%;  transform:rotate(-12deg);"></i>
+      <i class="fa fa-stethoscope"   style="top:3%;  left:16%; transform:rotate(15deg);"></i>
+      <i class="fa fa-medkit"        style="top:3%;  left:30%; transform:rotate(-8deg);"></i>
+      <i class="fa fa-user-md"       style="top:3%;  left:44%; transform:rotate(20deg);"></i>
+      <i class="fa fa-hospital-o"    style="top:3%;  left:58%; transform:rotate(-5deg);"></i>
+      <i class="fa fa-leaf"          style="top:3%;  left:72%; transform:rotate(10deg);"></i>
+      <i class="fa fa-comments"      style="top:3%;  left:86%; transform:rotate(-18deg);"></i>
+
+      <i class="fa fa-plus-square-o" style="top:15%; left:9%;  transform:rotate(12deg);"></i>
+      <i class="fa fa-ambulance"     style="top:15%; left:23%; transform:rotate(-7deg);"></i>
+      <i class="fa fa-heartbeat"     style="top:15%; left:37%; transform:rotate(18deg);"></i>
+      <i class="fa fa-stethoscope"   style="top:15%; left:51%; transform:rotate(-10deg);"></i>
+      <i class="fa fa-medkit"        style="top:15%; left:65%; transform:rotate(8deg);"></i>
+      <i class="fa fa-user-md"       style="top:15%; left:79%; transform:rotate(-15deg);"></i>
+
+      <i class="fa fa-hospital-o"    style="top:28%; left:2%;  transform:rotate(5deg);"></i>
+      <i class="fa fa-leaf"          style="top:28%; left:16%; transform:rotate(-14deg);"></i>
+      <i class="fa fa-comments"      style="top:28%; left:30%; transform:rotate(11deg);"></i>
+      <i class="fa fa-plus-square-o" style="top:28%; left:44%; transform:rotate(-9deg);"></i>
+      <i class="fa fa-ambulance"     style="top:28%; left:58%; transform:rotate(16deg);"></i>
+      <i class="fa fa-heartbeat"     style="top:28%; left:72%; transform:rotate(-13deg);"></i>
+      <i class="fa fa-stethoscope"   style="top:28%; left:86%; transform:rotate(7deg);"></i>
+
+      <i class="fa fa-medkit"        style="top:40%; left:9%;  transform:rotate(-19deg);"></i>
+      <i class="fa fa-user-md"       style="top:40%; left:23%; transform:rotate(9deg);"></i>
+      <i class="fa fa-hospital-o"    style="top:40%; left:37%; transform:rotate(-4deg);"></i>
+      <i class="fa fa-leaf"          style="top:40%; left:51%; transform:rotate(15deg);"></i>
+      <i class="fa fa-comments"      style="top:40%; left:65%; transform:rotate(-11deg);"></i>
+      <i class="fa fa-ambulance"     style="top:40%; left:79%; transform:rotate(14deg);"></i>
+
+      <!-- SET 2 — visible inicialmente (top 50–100% = dentro de la sección), idéntico al set 1 + 50% -->
+      <i class="fa fa-heartbeat"     style="top:53%; left:2%;  transform:rotate(-12deg);"></i>
+      <i class="fa fa-stethoscope"   style="top:53%; left:16%; transform:rotate(15deg);"></i>
+      <i class="fa fa-medkit"        style="top:53%; left:30%; transform:rotate(-8deg);"></i>
+      <i class="fa fa-user-md"       style="top:53%; left:44%; transform:rotate(20deg);"></i>
+      <i class="fa fa-hospital-o"    style="top:53%; left:58%; transform:rotate(-5deg);"></i>
+      <i class="fa fa-leaf"          style="top:53%; left:72%; transform:rotate(10deg);"></i>
+      <i class="fa fa-comments"      style="top:53%; left:86%; transform:rotate(-18deg);"></i>
+
+      <i class="fa fa-plus-square-o" style="top:65%; left:9%;  transform:rotate(12deg);"></i>
+      <i class="fa fa-ambulance"     style="top:65%; left:23%; transform:rotate(-7deg);"></i>
+      <i class="fa fa-heartbeat"     style="top:65%; left:37%; transform:rotate(18deg);"></i>
+      <i class="fa fa-stethoscope"   style="top:65%; left:51%; transform:rotate(-10deg);"></i>
+      <i class="fa fa-medkit"        style="top:65%; left:65%; transform:rotate(8deg);"></i>
+      <i class="fa fa-user-md"       style="top:65%; left:79%; transform:rotate(-15deg);"></i>
+
+      <i class="fa fa-hospital-o"    style="top:78%; left:2%;  transform:rotate(5deg);"></i>
+      <i class="fa fa-leaf"          style="top:78%; left:16%; transform:rotate(-14deg);"></i>
+      <i class="fa fa-comments"      style="top:78%; left:30%; transform:rotate(11deg);"></i>
+      <i class="fa fa-plus-square-o" style="top:78%; left:44%; transform:rotate(-9deg);"></i>
+      <i class="fa fa-ambulance"     style="top:78%; left:58%; transform:rotate(16deg);"></i>
+      <i class="fa fa-heartbeat"     style="top:78%; left:72%; transform:rotate(-13deg);"></i>
+      <i class="fa fa-stethoscope"   style="top:78%; left:86%; transform:rotate(7deg);"></i>
+
+      <i class="fa fa-medkit"        style="top:90%; left:9%;  transform:rotate(-19deg);"></i>
+      <i class="fa fa-user-md"       style="top:90%; left:23%; transform:rotate(9deg);"></i>
+      <i class="fa fa-hospital-o"    style="top:90%; left:37%; transform:rotate(-4deg);"></i>
+      <i class="fa fa-leaf"          style="top:90%; left:51%; transform:rotate(15deg);"></i>
+      <i class="fa fa-comments"      style="top:90%; left:65%; transform:rotate(-11deg);"></i>
+      <i class="fa fa-ambulance"     style="top:90%; left:79%; transform:rotate(14deg);"></i>
+    </div>
     <div class="container mx-auto px-4">
       <div class="flex justify-center">
         <div class="w-full lg:w-1/2">
