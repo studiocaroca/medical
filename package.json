@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "vite",
-    "build": "vite build",
+    "build": "tailwindcss -i ./src/index.css -o ./src/index.built.css && vite build",
     "build-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "preview": "vite preview"
   },
