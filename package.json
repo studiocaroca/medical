@@ -1,5 +1,4 @@
-Progreso, cambió el error. Ahora falta postcss-selector-parser. Agregalo a los overrides. Usá este package.json:
-json{
+{
   "name": "heady-tailwindcss-single-product-landing-page-template",
   "version": "1.0.0",
   "main": "index.js",
