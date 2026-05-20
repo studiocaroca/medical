@@ -33,6 +33,18 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/themify-icons@1.0.1/css/themify-icons.css">
   <link rel="stylesheet" href="css/themify-icons/css/themify-icons.css">
+  <style>
+    @keyframes gradientMove {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animated-gradient {
+      background: linear-gradient(232deg, rgba(171, 208, 186, 1) 0%, rgba(104, 173, 187, 1) 50%, rgba(255, 204, 108, 1) 100%);
+      background-size: 300% 300%;
+      animation: gradientMove 8s ease infinite;
+    }
+  </style>
 </head>
 
 <body class="bg-body" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%"
@@ -228,8 +240,8 @@
     <section id="intro">
  
       <!-- Content Column -->
-        <div class="w-full flex justify-center items-center bg-cover bg-center bg-no-repeat"
-          style="background: linear-gradient(232deg,rgba(171, 208, 186, 1) 0%, rgba(104, 173, 187, 1) 50%, rgba(255, 204, 108, 1) 100%); min-height: 650px;">
+        <div class="w-full flex justify-center items-center animated-gradient"
+          style="min-height: 650px;">
           <div class="banner-content p-8 lg:p-12 text-center center text-grey" data-aos="fade-up" data-aos-delay="9000">
             <img src="images/insignia-grey.png" class="margin-bottom" width="50%" alt="logo insignia">
             <a href="#company-services" class="btn-outline mt-4">
