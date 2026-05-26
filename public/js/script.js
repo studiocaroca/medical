@@ -31,14 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
   "use strict";
 
   var initPreloader = function () {
-    var Body = $('body');
-    Body.addClass('preloader-site');
-    $(document).ready(function () {
-      setTimeout(function () {
-        $('.preloader-wrapper').fadeOut(400);
-        Body.removeClass('preloader-site');
-      }, 200);
-    });
+    $('body').addClass('preloader-site');
+    setTimeout(function () {
+      $('.preloader-wrapper').fadeOut(400);
+      $('body').removeClass('preloader-site');
+    }, 200);
   }
 
   var initSliderfeature = function () {
