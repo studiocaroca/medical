@@ -31,13 +31,13 @@ document.addEventListener('DOMContentLoaded', function () {
   "use strict";
 
   var initPreloader = function () {
-    $(document).ready(function ($) {
-      var Body = $('body');
-      Body.addClass('preloader-site');
-    });
-    $(window).load(function () {
-      $('.preloader-wrapper').fadeOut();
-      $('body').removeClass('preloader-site');
+    var Body = $('body');
+    Body.addClass('preloader-site');
+    $(document).ready(function () {
+      setTimeout(function () {
+        $('.preloader-wrapper').fadeOut(400);
+        Body.removeClass('preloader-site');
+      }, 200);
     });
   }
 
